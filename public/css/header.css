@@ -1,0 +1,15 @@
+.header a, .header li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* เลือก ul ตัวแรกสุด */
+.header ul:first-child li {
+    float:left;
+    list-style-type: none;
+}
+/* เลือก ul ตัวสุดท้าย */
+.header ul:last-child li {
+    float:right;
+    list-style-type: none;
+}
