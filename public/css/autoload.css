@@ -1,4 +1,10 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Itim', sans-serif;
+    font-size: 18px;
+}
+
+body, html {
+    height: 100%;
 }

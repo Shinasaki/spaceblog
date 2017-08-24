@@ -1,7 +1,23 @@
+.header {
+    overflow: hidden;
+    background: linear-gradient(#172233, #2f3463);
+}
+
 .header a, .header li{
+    color: #f2f2f2;
     text-decoration: none;
     list-style-type: none;
 }
+
+/* เลือก li ทุกตัว */
+.header li {
+    padding: 20px;
+    transition: background 0.3s;
+}
+    /* เมื่อเมาส์ไปชี้ */
+    .header li:hover {
+        background: #3f4689;
+    }
 
 /* เลือก ul ตัวแรกสุด */
 .header ul:first-child li {
