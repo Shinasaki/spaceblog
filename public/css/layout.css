@@ -1,0 +1,93 @@
+.layout hr {
+    margin: 20px 5px 20px 5px;
+    border:none;
+    height: 1.5px;
+    background: #f2f2f2;
+}
+
+.layout {
+    text-align: center;
+    padding: 30px 60px 30px 120px;
+    border-radius: 5px;
+    color: #f2f2f2;
+}
+
+.layout-highlight , .layout-highlight a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 80px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    animation: textfloat 6s ease-in-out infinite;
+}
+
+.layout-header {
+    font-size: 20px;
+    padding: 5px;
+    background: linear-gradient(#7bc653, #3c562e);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0px 1px 0px 0px #fff;
+}
+
+.layout-content {
+    min-height: 100%;
+    padding: 20px 5px 20px 5px;
+    background: linear-gradient(rgba(255, 255, 255, 0), #2c375b);
+}
+
+.layout-footer {
+    padding: 5px;
+    background: linear-gradient(#547482, #2c375b);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* ปุ่มinputต่างๆ เช่น ในหน้า SignIn และ SiginUp */
+.layout input[type='email'], .layout input[type='password'], .layout input[type='text'], .layout input[type='submit'] {
+    padding: 10px;
+    margin: 5px;
+    border:none;
+    border-radius: 5px;
+}
+/* ปุ่ม submit */
+.layout input[type='submit'] {
+    background: linear-gradient(#7bc653, #3c562e);
+    color: #f2f2f2;
+    cursor: pointer;
+    box-shadow: 0 1px 3px 0px #000;
+    transition: 0.3s
+}
+
+.layout input[type='submit']:hover {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+
+
+@media only screen and (max-width: 1080px) {
+    .layout {
+        padding: 30px !important;
+    }
+    .layout-highlight, .layout-highlight a {
+        font-size: 40px;
+        padding-top: 10%;
+    }
+    .layout input{
+        width: auto;
+    }
+}
+
+
+@keyframes textfloat {
+    0% {
+        transform:  translateY(0px);
+    }
+    50% {
+        transform:  translateY(-10px);
+    }
+    100% {
+        transform:  translateY(0px);
+    }
+}

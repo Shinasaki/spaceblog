@@ -1,3 +1,7 @@
+.header#mb {
+    display: none;
+}
+
 .header {
     overflow: hidden;
     background: linear-gradient(#172233, #2f3463);
@@ -28,4 +32,33 @@
 .header ul:last-child li {
     float:right;
     list-style-type: none;
+}
+
+
+.header li.header-burger {
+    text-align: right;
+}
+    .header li.header-burger i{
+        padding-right: 0px;
+    }
+    .header li.header-burger:hover ul li{
+        display:block;
+    }
+.header li ul li {
+    display: none;
+    clear:both;
+    padding: 15px 0 15px 15px;
+    transition: 0.3s;
+}
+
+
+
+
+@media only screen and (max-width: 1080px) {
+    .header#pc {
+        display: none !important;
+    }
+    .header#mb {
+        display: block !important;
+    }
 }

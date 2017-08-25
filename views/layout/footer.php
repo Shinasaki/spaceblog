@@ -1,3 +1,8 @@
 <div class="footer">
-    Footer
+    <div class="footer-surface">
+        <span class="footer-rocket">
+            <img src="public/img/rocket.png" />
+        </span>
+
+    </div>
 </div>

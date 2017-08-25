@@ -2,7 +2,7 @@
 <html>
     <head>
 
-        
+
         <!-- ดึงไฟล์ภายนอก -->
         <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -11,7 +11,7 @@
         <!-- ดึงไฟล์ภายใน -->
         <?php require_once 'autoload/init.php' ?>
 
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
 
 

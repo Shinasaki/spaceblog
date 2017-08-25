@@ -6,6 +6,7 @@
  */
 
 require_once 'autoload/database.php';
+session_start();
 
 # ดึงไฟล์ทุกไฟล์ใน Folder config
 foreach (glob('config/*.php') as $phpname) {

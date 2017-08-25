@@ -13,8 +13,17 @@
             case 'login':
                 require_once ('views/auth/login.php');
             break;
+
+            case 'logout':
+                require_once ('views/auth/logout.php');
+            break;
+
             case 'register':
                 require_once ('views/auth/register.php');
+            break;
+
+            case 'profile':
+                require_once ('views/auth/profile.php');
             break;
 
             # ถ้าเกิดไม่ตรงเงื่อยไขให้ไปหน้า 404
