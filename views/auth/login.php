@@ -1,8 +1,4 @@
 <?php
-// ถ้าเกิด login แล้วให้เด้งไปหน้าอื่น
-if (isset($_SESSION['id'])) {
-    header('location:?page=404');
-}
 
 // ต้องเจอค่า POST['email']
 if (isset($_POST['email'])) {
@@ -21,12 +17,13 @@ if (isset($_POST['email'])) {
             $auth = mysqli_fetch_assoc($query);
             // นำค่าที่เจอนั้นใส่เข้าไปใน session
             $_SESSION['id'] = $auth['id'];
-            $_SESSION['username'] = $auth['username'];
+            $_SESSION['email'] = $auth['email'];
+            $_SESSION['name'] = $auth['name'];
             $_SESSION['password'] = $auth['password'];
+            $_SESSION['avatar'] = $auth['avatar'];
             $_SESSION['date'] = $auth['date'];
 
-            echo "<script>alert('เข้าสู่ระบบ')</script>";
-            header('refresh:0; ?page=myblog');
+            header('location:?page=myblog');
         } else {
             echo "<script>alert('อีเมลล์หรือรหัสผ่านไม่ถูกต้อง')</script>";
             header('refresh:0; ?page=login');
@@ -50,7 +47,7 @@ if (isset($_POST['email'])) {
     <div class="layout-box">
         <form method="post" action="">
             <div class="layout-header">
-                Sign
+                Sign In
             </div>
             <div class="layout-content">
                 <input type="email" name="email" required placeholder="Your Email"/>

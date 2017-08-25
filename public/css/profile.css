@@ -1,0 +1,24 @@
+.profile table {
+    width: 100%;
+}
+
+.profile td {
+    padding: 20px;
+}
+    .profile td:first-child {
+        text-align: right;
+    }
+    .profile td:last-child {
+        text-align: left;
+    }
+
+.profile a{
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+
+.profile-avatar img{
+    width: 100px;
+    box-shadow: 0 0 0 2px #fff;
+}

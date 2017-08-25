@@ -1,8 +1,4 @@
 <?php
-// ถ้าเกิด login แล้วให้เด้งไปหน้าอื่น
-if (isset($_SESSION['id'])) {
-    header('location:?page=404');
-}
 
 if (isset($_POST['email'])) {
 
@@ -15,6 +11,7 @@ if (isset($_POST['email'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $password = password_hash(mysqli_real_escape_string($conn, $_POST['password']), PASSWORD_DEFAULT);
+    $avatar = "storage/auth/avatar.png";
 
     // ค้นหาในฐานข้อมูลว่ามีซ้ำไหม
     $query = mysqli_query($conn, "select * from users where email = '$email'");
@@ -22,11 +19,12 @@ if (isset($_POST['email'])) {
         echo "<script>alert('ไม่สามารถใช้อีเมลล์นี้ได้')</script>";
         header('refresh:0; ?page=register');
 
+
     // ถ้าไม่ซ้ำให้ insert เข้า table users
     } else {
-        mysqli_query($conn, "insert into users (email, name, password) values ('$email', '$name', '$password')");
+        mysqli_query($conn, "insert into users (email, name, password, avatar) values ('$email', '$name', '$password', '$avatar')") or die(mysqli_error($conn));
         echo "<script>alert('สมัครสมาชิกเสร็จสิ้น')</script>";
-        header('refresh:0; ?page=register');
+        header('refresh:0; ?page=login');
     }
 
 }
