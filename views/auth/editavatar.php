@@ -35,7 +35,7 @@
 <div class="layout" style="padding: 0 30% 0 30%;">
     <div class="layout-box">
         <div class="layout-highlight">
-            <img src="<?php echo $_SESSION['avatar'] ?>" style="width: 30%;"/>
+            <img src="<?php echo $_SESSION['avatar'] ?>" />
         </div>
     </div>
     <div class="layout-box">

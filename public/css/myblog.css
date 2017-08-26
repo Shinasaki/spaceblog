@@ -1,0 +1,40 @@
+table.myblog  {
+    width: 100%;
+    background: #cc
+}
+
+.myblog td {
+    padding: 10px;
+}
+    .myblog tr:nth-child(odd) {
+        background: linear-gradient( #2c375b, rgba(255, 255, 255, 0));
+    }
+    .myblog tr:nth-child(even) {
+        background: linear-gradient( rgba(255, 255, 255, 0), #2c375b);
+    }
+        .myblog tr:first-child td:first-child {
+            border-top-left-radius: 5px;
+        }
+        .myblog tr:first-child td:last-child {
+            border-top-right-radius: 5px;
+        }
+        .myblog tr:last-child td:first-child {
+            border-bottom-left-radius: 5px;
+        }
+        .myblog tr:last-child td:last-child {
+            border-bottom-right-radius: 5px;
+        }
+
+.myblog img {
+    height: 100px;
+    width: 100px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .myblog td {
+        padding: 10px;
+    }
+        .myblog img {
+            display: none;
+        }
+}

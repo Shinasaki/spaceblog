@@ -24,10 +24,15 @@
         <li class="header-burger">
             <i class="fa fa-list-ul" aria-hidden="true"></i>
             <ul>
-                <a href="?page=login"><li>Sign In</li></a>
-                <a href="?page=register"><li>Sign Up</li></a>
                 <a href="?page=myblog"><li>My Blog </li></a>
-                <a href="?page=write"><li>Write Blog </li></a>
+                <a href="?page=writeblog"><li>Write Blog </li></a>
+                <?php if (!isset($_SESSION['id'])): ?>
+                    <a href="?page=register"><li>Sign Up</li></a>
+                    <a href="?page=login"><li>Sign In</li></a>
+                <?php else: ?>
+                    <a href="?page=profile"><li>Profile</li></a>
+                    <a href="?page=logout"><li>Logout <i class="fa fa-power-off" aria-hidden="true" style="color:red;"></i></li></a>
+                <?php endif; ?>
             </ul>
         </li>
     </ul>

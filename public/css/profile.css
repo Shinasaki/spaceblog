@@ -21,4 +21,5 @@
 .profile-avatar img{
     width: 100px;
     box-shadow: 0 0 0 2px #fff;
+    border-radius: 50%;
 }

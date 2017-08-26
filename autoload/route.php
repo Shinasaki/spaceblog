@@ -41,6 +41,10 @@
                     require_once ('views/blog/writeblog.php');
                 break;
 
+                case 'read':
+                    require_once ('views/blog/read.php');
+                break;
+
                 # ถ้าเกิดไม่ตรงเงื่อยไขให้ไปหน้า 404
                 default:
                     header('location:?page=404');
@@ -71,6 +75,9 @@
                     header('location:?page=login');
                 break;
 
+                case 'read':
+                    require_once ('views/blog/read.php');
+                break;
 
                 # ถ้าเกิดไม่ตรงเงื่อยไขให้ไปหน้า 404
                 default:

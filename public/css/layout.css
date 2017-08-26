@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+    color: #f2f2f2 !important;
+}
+
 .layout hr {
     margin: 20px 5px 20px 5px;
     border:none;
@@ -14,11 +19,20 @@
 
 .layout-highlight , .layout-highlight a{
     color: #f2f2f2;
-    text-decoration: none;
     font-size: 80px;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     animation: textfloat 6s ease-in-out infinite;
+}
+    .layout-highlight img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        transform: translateY(35%);
+        margin-top: -10%;
+    }
+.layout-box {
+    padding-top: 5%;
 }
 
 .layout-header {
@@ -66,10 +80,10 @@
     color: #f2f2f2;
     cursor: pointer;
     box-shadow: 0 1px 3px 0px #000;
-    transition: 0.3s
+    transition: 0.3s;
 }
 
-.layout input[type='submit']:hover {
+.layout input[type='submit']:hover, .submit:hover {
     transform: translateY(1px);
     box-shadow: none;
 }
@@ -82,10 +96,16 @@
     }
     .layout-highlight, .layout-highlight a {
         font-size: 40px;
-        padding-top: 10%;
+        margin-bottom: 10%;
     }
     .layout input{
         width: auto;
+    }
+    .layout-highlight img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        transform: translateY(35%);
     }
 }
 

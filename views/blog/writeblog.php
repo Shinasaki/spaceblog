@@ -24,7 +24,7 @@ if(isset($_FILES['blogimg']['tmp_name'])) {
             ('$topic', '$content', '$catalog', '$_SESSION[id]', '$blogimg_dir')
             ")or die(mysqli_error($conn));
 
-            //header('refresh:0; ?page=myblog');
+            header('refresh:0; ?page=myblog');
         } else {
             echo "<script>alert('ผิดพลาดกรุณาลองภาพอื่น')</script>";
             header('refresh:0; ?page=editavatar');
